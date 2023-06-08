@@ -1,0 +1,37 @@
+{
+  "name": "Manglar",
+  "version": "2.0.0",
+  "description": "Plantilla que posee menú lateral, login de usuario, conexión a MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "JESierra",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "@influxdata/influxdb-client": "^1.20.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.5",
+    "express-session": "^1.17.2",
+    "install": "^0.13.0",
+    "method-override": "^3.0.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.12.10",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.6.0",
+    "handlebars": "^4.7.7",
+    "npm-check-updates": "^16.10.12"
+  }
+}

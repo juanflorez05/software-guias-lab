@@ -1,0 +1,10 @@
+  body {
+  background: #0a8347;  
+  background: -webkit-linear-gradient(to right, #0a8347, #0a8347); 
+  background: linear-gradient(to right, #0a8347, #0a8347); 
+}  
+.logo {
+  width: 50%;
+} 
+
+
