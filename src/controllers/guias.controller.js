@@ -25,21 +25,38 @@ guiasCtrl.createNewGuia = async (req, res) => {
     autor3
 
   });
-  console.log(newGuia);
+
   await newGuia.save();
-  res.send('/guias');
+  res.redirect('/guias');
 }
 guiasCtrl.renderGuias = async (req, res) => {
   const guias = await Guia.find();
   res.render('guias/all-guia', { guias });
 }
 guiasCtrl.renderEditForm = async (req, res) => {
-  const guia = await Guia.findById(req.params.ide);
+  const guia = await Guia.findById(req.params.id);  
   res.render('guias/edit-guia', { guia });
 }
-guiasCtrl.updateGuias = (req, res) => {
-  z
-  res.send('guia editada');
+guiasCtrl.updateGuias = async (req, res) => {
+  const{
+    title,
+    description,
+    autor,
+    autor1,
+    autor2,
+    autor3
+
+  } = req.body;
+  await Guia.findByIdAndUpdate(req.params.id, {
+    title,
+    description,
+    autor,
+    autor1,
+    autor2,
+    autor3
+
+  });
+  res.redirect('/guias');
 }
 guiasCtrl.deleteGuia = async (req, res) => {
   await Guia.findByIdAndDelete(req.params.id);
